@@ -416,6 +416,10 @@ class GhostLogger {
                     requestLog.extra = req.extra;
                 }
 
+                if (req?.requestedAt) {
+                    requestLog.requestedAt = req.requestedAt;
+                }
+
                 if (this.logBody) {
                     requestLog.body = this.removeSensitiveData(req.body);
                 }
