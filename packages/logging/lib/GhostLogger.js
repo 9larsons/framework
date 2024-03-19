@@ -416,8 +416,8 @@ class GhostLogger {
                     requestLog.extra = req.extra;
                 }
 
-                if (req?.requestedAt) {
-                    requestLog.requestedAt = req.requestedAt;
+                if (req.queueDepth) {
+                    requestLog.queueDepth = req.queueDepth;
                 }
 
                 if (this.logBody) {
